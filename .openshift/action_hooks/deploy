@@ -1,0 +1,5 @@
+echo "Executing 'python $OPENSHIFT_REPO_DIRmanage.py syncdb --noinput'"
+python "$OPENSHIFT_REPO_DIR"manage.py syncdb --noinput
+
+echo "Executing 'python $OPENSHIFT_REPO_DIRmanage.py collectstatic --noinput'"
+python "$OPENSHIFT_REPO_DIR"manage.py collectstatic --noinput
