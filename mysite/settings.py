@@ -31,7 +31,7 @@ else:
 DEBUG = not ON_PAAS
 DEBUG = DEBUG or 'DEBUG' in os.environ
 if ON_PAAS and DEBUG:
-    print "Debug mode is on"
+    print "*** Warning - Debug mode is on ***"
 
 TEMPLATE_DEBUG = True
 
