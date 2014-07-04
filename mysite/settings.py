@@ -27,7 +27,9 @@ else:
     SECRET_KEY = ')_7av^!cy(wfx=k#3*7x+(=j^fzv+ot^1@sh9s9t=8$bu@r(z$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# adjust to turn off when on Openshift, but allow an environment variable to override on PAAS
+DEBUG = not ON_PASS
+DEBUG = DEBUG or 'DJANGO_DEBUG' in os.environ
 
 TEMPLATE_DEBUG = True
 
