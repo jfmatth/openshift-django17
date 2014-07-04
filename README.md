@@ -41,6 +41,7 @@ python app-root/repo/manage.py createsuperuser
 
 ### Configuration details
 When a git push is done, the .openshift/action_hooks/deploy is executed.  This script does two things:
-1. Runs python manage.py syncdb to update any changes to the Schema
-2. Runs python manage.py collectstatic to move all necessary static files into /wsgi/static
+
+1.  Runs python manage.py syncdb to update any changes to the Schema
+2.  Runs python manage.py collectstatic to move all necessary static files into /wsgi/static
 
