@@ -46,7 +46,7 @@ When a git push is done, the .openshift/action_hooks/deploy is executed.  This s
 2.  Runs python manage.py collectstatic to move all necessary static files into /wsgi/static
 
 #### Debugging mode and Openshift
-By default, debug mode is off when pushed to Openshift.  However, if you'd like to turn on debugging (settings.DEBUG) while running on Openshift, you can set the environment variable DEBUG to True and re-push your application, and debugging will be turned on.
+By default, debug mode is off when pushed to Openshift.  However, if you'd like to turn on debugging (settings.DEBUG) while running on Openshift, you can set the environment variable DEBUG to True and then stop and start your application, and debugging will be turned on.
 
 ``` rhc env set DEBUG=True```
 
