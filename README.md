@@ -1,12 +1,58 @@
+Django v1.65 on OpenShift v3.2014
+=
+This git repository helps you get up and running quickly with django v1.65 and Openshift March 2014 release.
+###Features
+* Ready to use for local development
+* Easy to push to Openshift
+* Configured for PostgreSQL 9.2
+* Minimal changes to default django 1.6x installation
+* Uses new folder layout from Openshift March 2014 release
+* Has settings variable ON_PAAS to block out logic in settings file.
+* Allows for debug mode on Openshift with the help of an environment variable.
+
+###How to use this repository
+- Create an account at https://www.openshift.com
+- Install the RHC client tools if you have not already done so.
+```
+sudo gem install rhc
+rhc setup
+```
+- Create a Python 2.7 application
+```
+rhc app create django python-2.7
+```
+- Add the PostgreSQL 9.2 cartridge
+```
+rhc add-cartridge postgresql-9.2 --app <application name>
+```
+- Add this upstream repo
+```
+cd django
+git remote add upstream -m master git://github.com/openshift/django-example.git
+git pull -s recursive -X theirs upstream master
+```
+- Push the repo upstream
+```
+git push
+```
+- SSH into the application to create a super user
+```
+python app-root/repo/manage.py createsuperuser
+```
+
+
+
+
+
+
 Django on OpenShift
-===================
 
-This git repository helps you get up and running quickly w/ a Django
-installation on OpenShift.  The Django project name used in this repo
-is 'openshift' but you can feel free to change it.  Right now the
-backend is sqlite3 and the database runtime is found in
-`$OPENSHIFT_DATA_DIR/sqlite3.db`.
-
+=
+This git repository helps you get up and running quickly w/ a Django installation on OpenShift.  The Django project name used in this repo is 'openshift' but you can feel free to change it.  Right now the backend is sqlite3 and the database runtime is found in `$OPENSHIFT_DATA_DIR/sqlite3.db`.
+###Features
+* item 1
+* item 2
+* 
 Before you push this app for the first time, you will need to change
 the [Django admin password](#admin-user-name-and-password).
 Then, when you first push this
