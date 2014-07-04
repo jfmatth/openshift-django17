@@ -28,7 +28,7 @@ else:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # adjust to turn off when on Openshift, but allow an environment variable to override on PAAS
-DEBUG = not ON_PASS
+DEBUG = not ON_PAAS
 DEBUG = DEBUG or 'DJANGO_DEBUG' in os.environ
 
 TEMPLATE_DEBUG = True
