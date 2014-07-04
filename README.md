@@ -28,18 +28,32 @@ rhc add-cartridge postgresql-9.2 --app <application name>
 - Add this upstream repo
 ```
 cd django
-git remote add upstream -m master git://github.com/openshift/django-example.git
+git remote add upstream -m master https://github.com/jfmatth/openshift-django16.git
 git pull -s recursive -X theirs upstream master
 ```
 - Push the repo upstream
 ```
 git push
 ```
-- SSH into the application to create a super user
+- SSH into the application to create a django superuser
 ```
 python app-root/repo/manage.py createsuperuser
 ```
 
+###Local Development
+This repo is deisnged to be as close to what django creates from manage.py startproject as possible.
+
+The first time you setup your local environment
+```
+python manage.py syncdb
+```
+this will create your starting tables and superuser account.
+
+
+To run the local development server
+```
+python manage.py runserver
+```
 
 
 
