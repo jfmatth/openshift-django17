@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import socket
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -35,7 +37,11 @@ if ON_PAAS and DEBUG:
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = [os.environ['OPENSHIFT_APP_DNS'], socket.gethostname()]
+if ON_PAAS:
+    ALLOWED_HOSTS = [os.environ['OPENSHIFT_APP_DNS'], socket.gethostname()]
+else:
+    ALLOWED_HOSTS = []
+
 
 # Application definition
 
