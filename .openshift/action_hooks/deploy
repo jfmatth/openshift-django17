@@ -7,8 +7,8 @@
 echo "---> ACTION HOOK: deploy <---"
 source $OPENSHIFT_HOMEDIR/python/virtenv/bin/activate
 
-echo "Executing 'python $OPENSHIFT_REPO_DIR/manage.py syncdb --noinput'"
-python "$OPENSHIFT_REPO_DIR"/manage.py syncdb --noinput
+echo "Executing 'python $OPENSHIFT_REPO_DIR/manage.py migrate --noinput'"
+python "$OPENSHIFT_REPO_DIR"/manage.py migrate --noinput
 
 echo "Executing 'python $OPENSHIFT_REPO_DIR/manage.py collectstatic --noinput'"
 python "$OPENSHIFT_REPO_DIR"/manage.py collectstatic --noinput
