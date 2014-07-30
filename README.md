@@ -1,6 +1,6 @@
 Django v1.7 (rc2) on OpenShift v3.2014
 =
-This git repository helps you get up and running quickly with django v1.65 and Openshift March 2014 release.
+This git repository helps you get up and running quickly with django v1.7 and Openshift March 2014 release.
 ###Features
 * Ready to use for local development
 * Easy to push to Openshift
