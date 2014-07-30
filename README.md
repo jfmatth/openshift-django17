@@ -31,6 +31,12 @@ cd django
 git remote add upstream -m master https://github.com/jfmatth/openshift-django17.git
 git pull -s recursive -X theirs upstream master
 ```
+- Add django 1.7 rc2 to the environment on Openshift, by ssh'ing into your gear and running the following
+- (this is only required until django 1.7 is in the PIP repository.
+```
+pip install https://www.djangoproject.com/download/1.7c2/tarball/
+
+```
 - Push the repo upstream
 ```
 git push
