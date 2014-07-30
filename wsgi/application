@@ -12,6 +12,6 @@ try:
 except IOError:
     pass
 
-from django.core.handlers import wsgi
-application = wsgi.WSGIHandler()
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
 
