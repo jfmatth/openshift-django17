@@ -1,9 +1,10 @@
 from setuptools import setup
 
-setup(name='Sample django 1.6 on Red Hat Openshift',
-    version='1.0',
-    description='OpenShift App',
+setup(name='django 1.7 on Red Hat Openshift',
+    version='0.1',
+    description='django on OpenShift',
     author='Your Name',
     author_email='example@example.com',
-    url='http://www.python.org/sigs/distutils-sig/',
+    url='https://github.com/jfmatth/openshift-django17',
+    install_requires=['Django>=1.7', 'Django<1.8'],
 )
