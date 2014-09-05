@@ -39,7 +39,7 @@ git push
 ```
 python app-root/repo/manage.py createsuperuser
 ```
-- Now user your browser to connect to the Admin site.
+- Now use your browser to connect to the Admin site.
 
 ### Configuration details
 When a git push is done, the .openshift/action_hooks/deploy is executed.  This script does two things:
