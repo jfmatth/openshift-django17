@@ -52,3 +52,5 @@ By default, debug mode is off when pushed to Openshift.  However, if you'd like 
 
 ``` rhc env set DEBUG=True```
 
+#### Notes on compatibility
+This has not been tested thorougly with Python 3.  I'd love to have someone try that out for this repo.
