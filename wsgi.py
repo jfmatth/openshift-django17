@@ -1,8 +1,8 @@
 #!/usr/bin/python
 import os, sys
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
 
 if sys.version_info < (3,0,0):
-    os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
     sys.path.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR'],'mysite'))
     
     virtenv = os.path.join(os.environ['OPENSHIFT_PYTHON_DIR'],'virtenv')
