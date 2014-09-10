@@ -31,6 +31,10 @@ cd django
 git remote add upstream -m master https://github.com/jfmatth/openshift-django17.git
 git pull -s recursive -X theirs upstream master
 ```
+- Set the WSGI application to django's built in WSGI application.
+```
+rhc env set OPENSHIFT_PYTHON_WSGI_APPLICATION=mysite/wsgi.py --app django
+```
 - Push the repo upstream
 ```
 git push
