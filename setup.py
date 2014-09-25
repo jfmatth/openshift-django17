@@ -6,5 +6,4 @@ setup(name='django 1.7 on Red Hat Openshift',
     author='Your Name',
     author_email='example@example.com',
     url='https://github.com/jfmatth/openshift-django17',
-    install_requires=['Django>=1.7', 'Django<1.8'],
 )
