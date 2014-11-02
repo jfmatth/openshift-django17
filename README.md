@@ -45,6 +45,13 @@ python app-root/repo/manage.py createsuperuser
 ```
 - Now use your browser to connect to the Admin site.
 
+### Static files
+Static files are already setup and ready to use for either local or Openshift use. 
+
+Place all static files / folders into the static folder.  They will be collected with collectstatic when pushed to openshift.
+
+DO NOT PUT STATIC FILES INTO /wsgi/static/, this is merely a place holder for collectstatic.
+
 ### Running locally and the django tutorial
 This repository was designed to allow you to quickly develop and deploy a website to Openshift.  For local development, make sure you have the following setup:
 
