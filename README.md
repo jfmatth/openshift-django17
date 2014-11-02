@@ -6,7 +6,7 @@ This git repository helps you get up and running quickly with django v1.7 and Op
 * Easy to push to Openshift
 * Configured for PostgreSQL 9.2
 * Minimal changes to default django 1.7 installation
-* Names follow the django 1.6x tutorial
+* Names follow the django 1.7x tutorial
 * Uses new folder layout from Openshift March 2014 release
 * Allows for debug mode on Openshift with the help of an environment variable.
 
