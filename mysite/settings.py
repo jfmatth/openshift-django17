@@ -82,8 +82,8 @@ if ON_PAAS:
                 'NAME':     os.environ['OPENSHIFT_APP_NAME'],
                 'USER':     os.environ['OPENSHIFT_MYSQL_DB_USERNAME'],
                 'PASSWORD': os.environ['OPENSHIFT_MYSQL_DB_PASSWORD'],
-                'HOST':     os.environ['OPENSHIFT_MYSQLDB_DB_HOST'],
-                'PORT':     os.environ['OPENSHIFT_MYSQLDB_DB_PORT'],
+                'HOST':     os.environ['OPENSHIFT_MYSQL_DB_HOST'],
+                'PORT':     os.environ['OPENSHIFT_MYSQL_DB_PORT'],
             }
         }
 
