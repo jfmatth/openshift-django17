@@ -74,7 +74,7 @@ if ON_PAAS:
             }
         }
         
-    if "OPENSHIFT_MYSQL_DB_USERNAME" in os.environ: 
+    elif "OPENSHIFT_MYSQL_DB_USERNAME" in os.environ: 
     
         DATABASES = {
             'default': {

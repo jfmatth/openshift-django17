@@ -4,7 +4,7 @@ This git repository helps you get up and running quickly with django v1.7 and Op
 ###Features
 * Ready to use for local development
 * Easy to push to Openshift
-* Configured for PostgreSQL 9.2
+* Configured for PostgreSQL OR MySQL *new*
 * Minimal changes to default django 1.7 installation
 * Names follow the django 1.7x tutorial
 * Uses new folder layout from Openshift March 2014 release
@@ -21,9 +21,13 @@ rhc setup
 ```
 rhc app create django python-2.7
 ```
-- Add the PostgreSQL 9.2 cartridge
+- Add the database cartridge (choose one)
 ```
 rhc add-cartridge postgresql-9.2 --app django
+
+OR
+
+rhc add-cartridge mysql-5.5 -a django 
 ```
 - Add this upstream repo
 ```
@@ -31,8 +35,9 @@ cd django
 git remote add upstream -m master https://github.com/jfmatth/openshift-django17.git
 git pull -s recursive -X theirs upstream master
 ```
-- Set the WSGI application to django's built in WSGI application.
+- Remove the original wsgi.py, and set the WSGI application to django's built in WSGI application.
 ```
+rm wsgi.py
 rhc env set OPENSHIFT_PYTHON_WSGI_APPLICATION=mysite/wsgi.py --app django
 ```
 - Push the repo upstream
