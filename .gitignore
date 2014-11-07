@@ -1,2 +1,5 @@
 db.sqlite3
 *.pyc
+.project
+.pydevproject
+vpython27
