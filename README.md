@@ -28,7 +28,7 @@ rhc add-cartridge postgresql-9.2 --app django
 
 OR
 
-rhc add-cartridge mysql-5.5 -a django 
+rhc add-cartridge mysql-5.5 -app django 
 ```
 - Add this upstream repo
 ```
