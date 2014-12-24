@@ -58,6 +58,11 @@ Place all static files / folders into the static folder.  They will be collected
 
 DO NOT PUT STATIC FILES INTO /wsgi/static/, this is merely a place holder for collectstatic.
 
+### Where do I put my HTML Templates?
+All your HTML templates should go into the /templates folder, and commited to your repository.  The settings.py setting is told to look here as a base starting point for all your .HTML files.
+
+Django's standard is to put application level templates in a folder under the template folder, the same as the application name, but must be specified when calling it, i.e. TemplateView.as_view(template_name = "app1/myform.html"), but that is only a suggestion, not a hard and fast rule.  The tutorial has a good example for both static and template content https://docs.djangoproject.com/en/1.7/intro/tutorial06/#customize-your-app-s-look-and-feel 
+
 ### Running locally and the django tutorial
 This repository was designed to allow you to quickly develop and deploy a website to Openshift.  For local development, make sure you have the following setup:
 
