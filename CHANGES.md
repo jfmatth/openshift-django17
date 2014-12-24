@@ -1,5 +1,9 @@
 Changelog for django 1.7 on Openshift
 =
+###Version 1.3.1 (12/24/2014 - Merry Christmas / Happy New Year)
+* update settings.py to account for templates (Fixes #8), thanks to Bill K for this one.
+* update README.md to reflect new instructions for above.
+
 ###Version 1.3 (11/6/2014)
 * update settings.py to allow for either PostgreSQL or MySQL.
 * started tagging releases in git.
