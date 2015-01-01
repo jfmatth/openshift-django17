@@ -55,7 +55,7 @@ Static files are already setup and ready to use for either local or Openshift us
 
 Place all static files / folders into the static folder.  They will be collected with collectstatic when pushed to openshift.
 
-DO NOT PUT STATIC FILES INTO /wsgi/static/, this is merely a place holder for collectstatic.
+**DO NOT PUT STATIC FILES INTO /wsgi/static/**, this is merely a place holder for the collectstatic command.
 
 ### Where do I put my HTML Templates?
 All your HTML templates should go into the /templates folder, and commited to your repository.  The settings.py setting is told to look here as a base starting point for all your .HTML files.
