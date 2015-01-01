@@ -1,9 +1,6 @@
 Django v1.7 on OpenShift v3.2014+
 =
-####A git repository to get up and running quickly with django v1.7 and Openshift.
-
-**ALERT - There is currently a bug with HTTPS and the Red Hat preferred method of redirecting HTTP -> HTTPS via an .htaccess file in the WSGI folder.  I am working on a solution and will update soon.  For now, putting a .htaccess file in the WSGI folder *will not* redirect HTTP to HTTPS.**
-
+This git repository helps you get up and running quickly with django v1.7 and Openshift.
 ###Features
 * Ready to use for local development
 * Easy to push to Openshift
