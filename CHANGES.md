@@ -1,5 +1,9 @@
 Changelog for django 1.7 on Openshift
 =
+###Version 1.3.2 (12/31/2014 - Happy New Year (I need to work on non-holidays too).
+* Move where wsgi.py is located, so that HTTP redirection works as published by Red Hat.
+* Update README.md to reflect above, and add mention on how to redirect to HTTPS.
+
 ###Version 1.3.1 (12/24/2014 - Merry Christmas / Happy New Year)
 * update settings.py to account for templates (Fixes #8), thanks to Bill K for this one.
 * update README.md to reflect new instructions for above.

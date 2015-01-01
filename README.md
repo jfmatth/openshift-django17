@@ -36,16 +36,15 @@ cd django
 git remote add upstream -m master https://github.com/jfmatth/openshift-django17.git
 git pull -s recursive -X theirs upstream master
 ```
-- Remove the original wsgi.py, and set the WSGI application to django's built in WSGI application.
+- set the WSGI application to django's built in WSGI application (stored in the wsgi folder).
 ```
-rm wsgi.py
-rhc env set OPENSHIFT_PYTHON_WSGI_APPLICATION=mysite/wsgi.py --app django
+rhc env set OPENSHIFT_PYTHON_WSGI_APPLICATION=wsgi/wsgi.py --app django
 ```
 - Push the repo upstream
 ```
 git push
 ```
-- SSH into the application to create a django superuser
+- SSH into the application to create a django superuser.
 ```
 python app-root/repo/manage.py createsuperuser
 ```
@@ -89,5 +88,16 @@ By default, debug mode is off when pushed to Openshift.  However, if you'd like 
 
 ``` rhc env set DEBUG=True```
 
-#### Notes on compatibility
-This has not been tested thorougly with Python 3.  I'd love to have someone try that out for this repo.
+### HTTPS redirection
+HTTPS redirection is accompished by telling the local Apache gear to redirect all traffic to the HTTPS version of your site.  You'll need to add an .htaccess file into the WSGI folder
+
+Add the following .htaccess file into the WSGI folder
+```
+RewriteEngine on  
+RewriteCond %{HTTP:X-Forwarded-Proto} !https  
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,L]  
+```
+This will redirect **ALL** HTTP traffic to the site to HTTPS.
+
+### Notes on compatibility
+This has not been tested thoroughly with Python 3.  I'd love to have someone try that out for this repo.
