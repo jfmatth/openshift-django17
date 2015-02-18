@@ -101,3 +101,6 @@ This will redirect **ALL** HTTP traffic to the site to HTTPS.
 
 ### Notes on compatibility
 This has not been tested thoroughly with Python 3.  I'd love to have someone try that out for this repo.
+
+### Please Star if you like this repository.
+I don't publish many repositories, but if you like this project, please star it, thanks.
