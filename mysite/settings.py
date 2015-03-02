@@ -49,9 +49,6 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'mysite.urls'
 
-if ON_PAAS:
-    WSGI_APPLICATION = 'mysite.wsgi.application'
-
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
