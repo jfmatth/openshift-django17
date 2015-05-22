@@ -1,0 +1,8 @@
+This repository is a fork of the original openshift repo from RedHat for v1.4 of django.  I wanted to make it work with 1.6, so here is is.
+
+The original repo from RedHat has lots of authors, but oddly never had an AUTHORS file.  Please check the original history for more information.
+
+Authors
+John Matthew - https://github.com/jfmatth
+biwin - https://github.com/biwin
+
