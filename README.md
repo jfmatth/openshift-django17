@@ -1,3 +1,5 @@
+Development moved to https://github.com/jfmatth/openshift-django
+
 Django v1.7 on OpenShift v3.2014+
 =
 This git repository helps you get up and running quickly with django v1.7 and Openshift.
