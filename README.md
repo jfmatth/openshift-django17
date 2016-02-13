@@ -1,6 +1,3 @@
-###Bonus - Earn $15 Amazon gift card
-www.G2crowd.com is asking for some reviews of Openshift, and filling in the [survey](https://www.g2crowd.com/contributor/openshift-15-e?rewards=true&utm_source=KL&utm_medium=gmail&utm_campaign=LP_15) can get you a gift card.
-
 ###Development moved to https://github.com/jfmatth/openshift-django
 
 Django v1.7 on OpenShift v3.2014+
